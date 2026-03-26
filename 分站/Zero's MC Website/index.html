@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CZ Studio Minecraft</title>
+    <link rel="icon" type="image/png" href="media/CZ Studio.jpg">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="top"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="../../index.html"><img class="desktop_navbar_logo_img" src="media\CZ Gaming PNG.png" alt="logo" title="回到主页"></a>
+      <a href="#top" class="desktop_navbar_link scroll">返回顶部</a>
+      <a href="#" class="desktop_navbar_link">CZ社区</a>
+      <a href="#about" class="desktop_navbar_link scroll">关于我们</a>
+      <a href="#下载整合包" class="desktop_navbar_link scroll"> 下载整合包
+      <a href="https://hmcl.huangyuhui.net/download" class="desktop_navbar_link" target="_blank">下载HMCL启动器</a>
+         
+        
+      </a>
+      
+      
+      <div class="desktop_navbar_link2_div">
+          <a href="#QQ" class="desktop_navbar_link2 scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="../../index.html" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media\CZ Gaming PNG.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#"></a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">CZ社区</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">关于我们</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media\CZ logo.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Minecraft,<br>静候</a>
+          <a class="main1_actcent">佳音</a>
+            <br>我们即将回归
+        </div>
+        <div class="main1_ipcopier_div">
+          <!-- 域名复制按钮 -->
+          <!-- <button class="main1_ipcopier" onclick="copyText()" type="button"> -->
+            <!-- <span class="main1_ipcopier_text1">mc.czgaming.top</span> -->
+            <br>
+            <!-- <span class="main1_ipcopier_text2">点击复制域名</span> -->
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("mc.czgaming.top");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('复制成功'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">服务器展示</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media\服务器图片\MC截图1.png">
+            <a class="main2_feature_headline">这</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media\服务器图片\MC截图2.png">
+            <a class="main2_feature_headline">是</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media\服务器图片\MC截图3.png">
+            <a class="main2_feature_headline">五</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media\服务器图片\MC截图4.png">
+            <a class="main2_feature_headline">张</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media\服务器图片\MC截图5.png">
+            <a class="main2_feature_headline">图</a>
+            <a class="main2_feature_text"></a>
+          </div>
+        </div>
+      </div>
+      <div id="QQ"></div>
+      <div class="main4">
+        <a class="headline">加入我们</a>
+        <div class="main4_dc_div">
+          <img src="media\Q群二维码.jpg" alt=""width="350">
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Let's talk!</a>
+            <a class="main4_dc_description"> ・游戏交流 <br> ・获取服务器整合包更新 <br> ・了解服务器更新信息 <br> ・问题反馈</a>
+            <a href="https://qm.qq.com/q/MsFGFXQ4w2" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">所有者&管理员</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="media\个人信息图片\QQ头像LCZ.PNG"width="300">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title" href="javascript:void(0)">ID:LCZero</a>
+              <a class="main5_admins_description">服务器所有者<br>管理员<br>网站所有者</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media\个人信息图片\WMS.png"width="330">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[OP]</a>
+              <a class="main5_admins_description_title" href="javascript:void(0)">ID:WMS</a>
+              <a class="main5_admins_description">管理员<br></a>
+            </div>
+          </div>
+        </div>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media\个人信息图片\QQ头像lanan.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[OP]</a>
+              <a class="main5_supporters_description_title">ID:lanan_slm</a>
+              <a class="main5_supporters_description">&emsp;&emsp;管理员<br></a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[?]</a>
+              <a class="main5_supporters_description_title">?</a>
+              <a class="main5_supporters_description">?</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[?]</a>
+              <a class="main5_supporters_description_title">?</a>
+              <a class="main5_supporters_description">?</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[?]</a>
+              <a class="main5_supporters_description_title">?</a>
+              <a class="main5_supporters_description">?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">How to join <br>如何加入？</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Version:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>进群可查看</a>
+                <a>1.21.1(Neoforge)</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>暂无</a>
+                <a>暂无</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------整合包下载链接---------- -->
+    <div class="main4">
+      <div id="下载整合包"></div>
+        <a class="headline">Zero's server</a>
+        <div class="main4_dc_div">
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Minecraft Java 1.21.1<br>(NeoForge)</a>
+            <a class="main4_dc_description">注：需使用PCL2启动器导入整合包<br>
+               &emsp;&emsp;如遇下载出错请联系服主
+            <a href="" class="main4_dc_button_a">
+              <div class="main4_dc_button">我们即将回归</div>
+               <a href="https://bbsmc.net/software/pcl" class="main4_dc_button_a" target="_blank">
+              <div class="main4_dc_button">PCL2下载</div>  
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <footer class="copyright_div">
+      <a href="#" class="copyright">2025 CZ Studio. All Rights Reserved.</a>
+    </footer>
+  </body>
+</html>
