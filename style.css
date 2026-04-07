@@ -38,7 +38,9 @@ header {
 .logo {
   font-size: 22px;
   color: #4da3ff;
+  
 }
+
 
 nav a {
   margin-left: 20px;
@@ -137,6 +139,15 @@ nav a:hover {
   width: 100%;
   padding: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+
+   /* 新增 ↓ */
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/* 鼠标移到卡片 */
+.card:hover .overlay {
+  opacity: 0;
 }
 
 .overlay h3 {
@@ -230,3 +241,4 @@ footer {
     right: 0;
   }
 }
+
