@@ -113,7 +113,7 @@ nav a:hover {
   border-radius: 12px;
   cursor: pointer;
   transition: 0.4s;
-  color:hsl(184, 100%, 50%)
+  color:hsl(0, 0%, 100%)
 }
 
 .card img {
