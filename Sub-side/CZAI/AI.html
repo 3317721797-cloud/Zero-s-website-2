@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CZ Studio Zerai</title>
+
+    <link rel="stylesheet" href="AI.css">
+
+    <!-- Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- 代码高亮 -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/atom-one-dark.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         开场 Logo
+    ========================== -->
+
+    <div id="intro">
+        <img src="../../img\CZLOGO小.png" alt="Logo">
+    </div>
+
+
+    <!-- =========================
+         背景
+    ========================== -->
+
+    <div class="background-grid"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+
+    <!-- =========================
+         主程序
+    ========================== -->
+
+    <div class="app">
+
+        <!-- 左侧栏 -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <img src="../../img\CZLOGO小.png"
+                     class="brand-logo"
+                     alt="Logo">
+
+                <div>
+                    <div class="brand-title">Zerai AI</div>
+                    <div class="brand-subtitle">By CZ Studio</div>
+                </div>
+
+            </div>
+
+
+            <button class="new-chat" id="newChat">
+
+                <span>＋</span>
+
+                <span>新建对话</span>
+
+            </button>
+
+
+            <div class="side-title">
+                CONVERSATIONS
+            </div>
+
+
+            <div class="history" id="history">
+
+                <div class="history-item active">
+                    <span class="history-dot"></span>
+                    <span>New Conversation</span>
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <div class="status-title">
+                            SYSTEM ONLINE
+                        </div>
+
+                        <div class="status-desc">
+                            API CONNECTION READY
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- 主聊天区域 -->
+
+        <main class="main">
+
+
+            <!-- 顶部 -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <div class="model-title">
+                        Zerai AI
+                    </div>
+
+                    <div class="model-status">
+                        <span></span>
+                        CZ Studio
+                    </div>
+
+                </div>
+
+
+                <div class="top-actions">
+
+                    <button id="clearChat">
+                        清除
+                        
+                    </button>
+
+                    <button onclick="window.location.href='../../index.html'">
+                        返回主页
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- 对话 -->
+
+            <section class="chat" id="chat">
+
+                <div class="welcome">
+
+                    <div class="welcome-logo">
+
+                        <img src="../../img\Zerai AI.png"
+                             alt="AI">
+
+                    </div>
+
+
+                    <div class="welcome-title">
+                        Zerai
+                    </div>
+
+                    <div class="welcome-desc">
+
+                        CZ Studio Zerai
+
+                        <br>
+
+                        有就问
+
+                    </div>
+
+
+                    <!-- 词条建议
+                    <div class="suggestions">
+
+                        <button>
+                            ✦ 帮我写一段代码
+                        </button>
+
+                        <button>
+                            ◇ 分析一段文本
+                        </button>
+
+                        <button>
+                            ⌁ 帮我解决一个问题
+                        </button> -->
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 输入区域 -->
+
+            <section class="input-area">
+
+
+                <!-- 输入框上方 -->
+
+                <div class="input-header">
+
+                    <!-- -----边框左上文本-----
+                    <div class="input-brand">
+
+                        <img src="../../img\CZLOGO小.png"
+                             alt="Logo">
+
+                        <span>
+                            Zerai
+                        </span>
+
+                    </div> -->
+
+
+                    <div class="input-info">
+
+                        <span>
+                            ENTER TO SEND
+                        </span>
+
+                        <span class="separator">
+                            /
+                        </span>
+
+                        <span>
+                            SHIFT + ENTER
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 输入框 -->
+
+                <div class="input-box">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="说吧..."
+                        rows="1"></textarea>
+
+
+                    <button id="sendBtn">
+
+                        <span class="send-icon">
+                            ➤
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="input-footer">
+
+                    <span>
+                        POWERED BY DEEPSEEK
+                    </span>
+
+                    <span>
+                        个人项目
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         设置窗口
+    ========================== -->
+
+    <!-- <div class="modal hidden" id="settingsModal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    API SETTINGS
+                </div>
+
+                <button id="closeSettings">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <label>
+                    DEEPSEEK API KEY
+                </label>
+
+                <input
+                    id="apiKey"
+                    type="password"
+                    placeholder="sk-xxxxxxxx">
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <label>
+                    MODEL
+                </label>
+
+                <select id="model">
+
+                    <option value="deepseek-chat">
+                        deepseek-chat
+                    </option>
+
+                    <option value="deepseek-reasoner">
+                        deepseek-reasoner
+                    </option>
+
+                </select>
+
+            </div> -->
+
+
+            <div class="setting-item">
+
+                <label>
+                    SYSTEM PROMPT
+                </label>
+
+                <textarea
+                    id="systemPrompt"
+                    placeholder="你是一个有帮助的AI助手..."
+                ></textarea>
+
+            </div>
+
+
+            <button class="save-settings"
+                    id="saveSettings">
+
+                SAVE CONFIGURATION
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="AI.js"></script>
+
+</body>
+</html>
